@@ -57,7 +57,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vo-bh-bnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="714"/>
+            <point key="canvasLocation" x="-100" y="641"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="y2d-jf-AWa">
@@ -85,6 +85,9 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-K9-Dku">
                                             <rect key="frame" x="342" y="11" width="20" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <segue destination="NXA-pY-0cG" kind="show" id="nuw-x7-zDE"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MedRemind" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lde-Hs-xIc">
                                             <rect key="frame" x="161" y="10" width="92" height="21"/>
@@ -112,25 +115,22 @@
             <objects>
                 <viewController id="NXA-pY-0cG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6xx-5g-Id0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Medication Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-Ns-HjN">
-                                <rect key="frame" x="140" y="61" width="134" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medication Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTq-Ns-HjN">
+                                <rect key="frame" x="70" y="50" width="274" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.61122060306082293" green="0.79054468616611462" blue="0.98328930139541626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afh-Rr-X4B">
-                                <rect key="frame" x="159" y="130" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afh-Rr-X4B">
+                                <rect key="frame" x="70" y="141" width="274" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-jt-GGp">
-                                <rect key="frame" x="153" y="260" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-jt-GGp">
+                                <rect key="frame" x="70" y="245" width="274" height="30"/>
                                 <state key="normal" title="Add Medication">
                                     <color key="titleColor" red="0.60663585027057665" green="0.91601306199999999" blue="0.71728410733751935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -138,12 +138,23 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hmD-WQ-74Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="afh-Rr-X4B" firstAttribute="top" secondItem="BTq-Ns-HjN" secondAttribute="bottom" constant="70" id="3NN-Vy-AxJ"/>
+                            <constraint firstItem="afh-Rr-X4B" firstAttribute="leading" secondItem="hmD-WQ-74Z" secondAttribute="leading" constant="70" id="7lS-Eg-ZEx"/>
+                            <constraint firstItem="DgH-jt-GGp" firstAttribute="top" secondItem="afh-Rr-X4B" secondAttribute="bottom" constant="70" id="9Ic-9T-B7s"/>
+                            <constraint firstItem="DgH-jt-GGp" firstAttribute="leading" secondItem="hmD-WQ-74Z" secondAttribute="leading" constant="70" id="EFt-Cp-or8"/>
+                            <constraint firstItem="BTq-Ns-HjN" firstAttribute="leading" secondItem="hmD-WQ-74Z" secondAttribute="leading" constant="70" id="K8N-Qe-2ni"/>
+                            <constraint firstItem="hmD-WQ-74Z" firstAttribute="trailing" secondItem="BTq-Ns-HjN" secondAttribute="trailing" constant="70" id="TOb-iw-eVi"/>
+                            <constraint firstItem="hmD-WQ-74Z" firstAttribute="trailing" secondItem="afh-Rr-X4B" secondAttribute="trailing" constant="70" id="g5k-uV-RBE"/>
+                            <constraint firstItem="hmD-WQ-74Z" firstAttribute="trailing" secondItem="DgH-jt-GGp" secondAttribute="trailing" constant="70" id="hnU-K9-ywV"/>
+                            <constraint firstItem="BTq-Ns-HjN" firstAttribute="top" secondItem="hmD-WQ-74Z" secondAttribute="top" constant="50" id="yvn-Zy-LFh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UDm-PF-SvD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAk-kD-yH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="42"/>
+            <point key="canvasLocation" x="713" y="-34"/>
         </scene>
     </scenes>
     <resources>
