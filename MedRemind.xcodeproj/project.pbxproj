@@ -16,6 +16,7 @@
 		9A82633226A73ED30019A72E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A82633026A73ED30019A72E /* LaunchScreen.storyboard */; };
 		9A82633D26A73ED40019A72E /* MedRemindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82633C26A73ED40019A72E /* MedRemindTests.swift */; };
 		9A82634826A73ED40019A72E /* MedRemindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82634726A73ED40019A72E /* MedRemindUITests.swift */; };
+		9A82635626A744040019A72E /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82635526A744040019A72E /* AddMedicineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		9A82634326A73ED40019A72E /* MedRemindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedRemindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A82634726A73ED40019A72E /* MedRemindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedRemindUITests.swift; sourceTree = "<group>"; };
 		9A82634926A73ED40019A72E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A82635526A744040019A72E /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				9A82633026A73ED30019A72E /* LaunchScreen.storyboard */,
 				9A82633326A73ED30019A72E /* Info.plist */,
 				9A82632B26A73ED10019A72E /* MedRemind.xcdatamodeld */,
+				9A82635526A744040019A72E /* AddMedicineViewController.swift */,
 			);
 			path = MedRemind;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				9A82632726A73ED10019A72E /* ViewController.swift in Sources */,
 				9A82632326A73ED10019A72E /* AppDelegate.swift in Sources */,
+				9A82635626A744040019A72E /* AddMedicineViewController.swift in Sources */,
 				9A82632526A73ED10019A72E /* SceneDelegate.swift in Sources */,
 				9A82632D26A73ED10019A72E /* MedRemind.xcdatamodeld in Sources */,
 			);
