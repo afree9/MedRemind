@@ -8,14 +8,27 @@
 import UIKit
 
 class AddReminderViewController: UIViewController {
-
-    @IBOutlet weak var timeHourTextField: UITextField!
-    @IBOutlet weak var timeMinutesTextField: UITextField!
+    
+    
+    @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var bodyField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    public var completion : ((String, String, Date) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
     }
+    
+    @IBAction func didTapSaveButton() {
+        if let titleText = titleField.text, !titleText.isEmpty,
+           let bodyText = titleField.text, !titleText.isEmpty{
+        let targetDate = datePicker.date
+            
+        }
+    }
+    
 
 }
