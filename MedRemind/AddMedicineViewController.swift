@@ -22,13 +22,25 @@ var previousVC = MedicineTableViewController ()
     @IBAction func addTapped(_ sender: Any) {
         let medicine = Medicine()
         
-        if let titleText = titleTextField.text {
-            medicine.medicineName = titleText
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            let medicine = MedicineCD(entity : MedicineCD.entity(), insertInto : context)
+            
+
+            if let titleText = titleTextField.text {
+                medicine.medicineName = titleText
+        }
         
+            try? context.save()
+            
+            navigationController?.popViewController(animated: true)
+            
+        }
+//        previousVC.medicines.append(medicine)
+//        previousVC.tableView.reloadData()
+//        navigationController?.popViewController(animated: true)
     }
-        previousVC.medicines.append(medicine)
-        previousVC.tableView.reloadData()
-        navigationController?.popViewController(animated: true)
+
 }
     
     /*
@@ -41,4 +53,3 @@ var previousVC = MedicineTableViewController ()
     }
     */
 
-}

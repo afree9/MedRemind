@@ -8,13 +8,30 @@
 import UIKit
 
 class MedicineTableViewController: UITableViewController {
+    var medicines : [MedicineCD] = []
     
-    var medicines : [Medicine] = []
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+        // no longer need - medicines = createMedicines()
         
-        medicines = createMedicines()
+        
+        func getMedicines() {
+            if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                if let coreDataMedicines = try?
+                    context.fetch(MedicineCD.fetchRequest()) as? [MedicineCD] {
+                     medicines = coreDataMedicines
+                        tableView.reloadData()
+                    }
+                }
+            }
+        
+
+override func viewWillAppear(_ animated : Bool){
+    getMedicines()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,7 +39,7 @@ class MedicineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
+   // might want to delete this
     func createMedicines() -> [Medicine]{
         let swift = Medicine()
         swift.medicineName = "Medicine A"
@@ -47,7 +64,7 @@ class MedicineTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let medicine = medicines [indexPath.row]
+        let medicine = medicines[indexPath.row]
         
         // do i need an if or let statement or can this be by itself
             cell.textLabel?.text = medicine.medicineName
@@ -105,8 +122,8 @@ class MedicineTableViewController: UITableViewController {
         
         if let completeVC = segue.destination as? CompleteMedicineViewController {
             if let medicine = sender as? Medicine {
-                completeVC.selectedMedicine = medicine
-                completeVC.previousVC = self
+               completeVC.selectedMedicine = medicine
+               completeVC.previousVC = self
             }
         }
         // Get the new view controller using segue.destination.
