@@ -8,14 +8,29 @@
 import UIKit
 
 class AddMedicineViewController: UIViewController {
-
+var previousVC = MedicineTableViewController ()
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
-
+    @IBAction func addTapped(_ sender: Any) {
+        let medicine = Medicine()
+        
+        if let titleText = titleTextField.text {
+            medicine.medicineName = titleText
+        
+    }
+        previousVC.medicines.append(medicine)
+        previousVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+}
+    
     /*
     // MARK: - Navigation
 

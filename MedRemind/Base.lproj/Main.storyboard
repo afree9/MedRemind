@@ -129,11 +129,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-jt-GGp">
-                                <rect key="frame" x="70" y="333" width="274" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-jt-GGp">
+                                <rect key="frame" x="70" y="334" width="274" height="30"/>
                                 <state key="normal" title="Add Medication">
                                     <color key="titleColor" red="0.60663585027057665" green="0.91601306199999999" blue="0.71728410733751935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTapped:" destination="NXA-pY-0cG" eventType="touchUpInside" id="SfI-1I-HrE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hmD-WQ-74Z"/>
@@ -151,6 +154,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UDm-PF-SvD"/>
+                    <connections>
+                        <outlet property="titleTextField" destination="afh-Rr-X4B" id="izi-by-NhF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAk-kD-yH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
