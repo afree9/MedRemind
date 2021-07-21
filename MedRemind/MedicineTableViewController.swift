@@ -6,11 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class MedicineTableViewController: UITableViewController {
     var medicines : [MedicineCD] = []
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +40,7 @@ override func viewWillAppear(_ animated : Bool){
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
    // might want to delete this
-    func createMedicines() -> [Medicine]{
-        let swift = Medicine()
-        swift.medicineName = "Medicine A"
-        
-        return [swift]
-    }
+ 
 
     // MARK: - Table view data source
 

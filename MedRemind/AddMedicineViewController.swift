@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddMedicineViewController: UIViewController {
 var previousVC = MedicineTableViewController ()

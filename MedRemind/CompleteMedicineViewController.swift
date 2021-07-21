@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class CompleteMedicineViewController: UIViewController {
 var previousVC = MedicineTableViewController()
-    var selectedMedicine = MedicineCD?
+    var selectedMedicine : MedicineCD?
     
     @IBOutlet weak var titleLabel: UILabel!
     
