@@ -14,6 +14,16 @@ var previousVC = MedicineTableViewController()
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var completeSwitch: UISwitch!
+    // trying to flip switch and click button to show check mark
+    
+    @IBAction func completeButton(_ sender: Any) {
+       
+        
+
+        }
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -61,8 +61,15 @@ override func viewWillAppear(_ animated : Bool){
         // Configure the cell...
         let medicine = medicines[indexPath.row]
         
-        // do i need an if or let statement or can this be by itself
+        if let medicineName = medicine.medicineName{
+//            if medicine.medicineComplete {
+//                cell.textLabel?.text = "✅" + medicine.medicineName
+            }
+        
+        else {
             cell.textLabel?.text = medicine.medicineName
+        }
+    }
         
         return cell
     }
@@ -129,4 +136,5 @@ override func viewWillAppear(_ animated : Bool){
         
         performSegue(withIdentifier : "moveToDelete", sender: medicine)
     }
+
 }

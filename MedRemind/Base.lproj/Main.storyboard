@@ -85,6 +85,14 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-6v-BWK">
                                 <rect key="frame" x="80" y="300" width="326" height="31"/>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAS-2X-D1S">
+                                <rect key="frame" x="190" y="300" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yay! Click here:"/>
+                                <connections>
+                                    <action selector="completeButton:" destination="7oP-ef-cnP" eventType="touchUpInside" id="eZ8-Pl-0fI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ra4-OE-0Ss"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -102,6 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="20M-Aw-Dn7"/>
                     <connections>
+                        <outlet property="completeSwitch" destination="x8R-6v-BWK" id="wYc-FV-WTP"/>
                         <outlet property="titleLabel" destination="R6q-LD-c4d" id="oJA-ww-lin"/>
                     </connections>
                 </viewController>

@@ -9,6 +9,7 @@ import UIKit
 class Medicine{
 
     var medicineName = ""
+    var medicineComplete = false 
     
 }
 

@@ -13,6 +13,8 @@ var previousVC = MedicineTableViewController ()
     
     @IBOutlet weak var titleTextField: UITextField!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,7 @@ var previousVC = MedicineTableViewController ()
 
             if let titleText = titleTextField.text {
                 medicine.medicineName = titleText
+            
         }
         
             try? context.save()
