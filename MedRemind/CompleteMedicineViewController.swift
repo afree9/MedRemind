@@ -9,18 +9,25 @@ import UIKit
 
 class CompleteMedicineViewController: UIViewController {
 var previousVC = MedicineTableViewController()
-    var selectedMedicine = Medicine()
+    var selectedMedicine = MedicineCD?
     
     @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.text = selectedMedicine.medicineName
+        titleLabel.text = selectedMedicine?.medicineName
         // Do any additional setup after loading the view.
     }
     
     @IBAction func deleteTapped(_ sender: Any) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let theMedicine = selectedMedicine {
+                context.delete(theMedicine)
+                navigationController?.popViewController(animated: true)
+            }
+        }
+        
     }
     
     /*

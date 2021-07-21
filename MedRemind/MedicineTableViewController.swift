@@ -121,7 +121,7 @@ override func viewWillAppear(_ animated : Bool){
         }
         
         if let completeVC = segue.destination as? CompleteMedicineViewController {
-            if let medicine = sender as? Medicine {
+            if let medicine = sender as? MedicineCD {
                completeVC.selectedMedicine = medicine
                completeVC.previousVC = self
             }
