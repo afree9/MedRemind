@@ -8,9 +8,13 @@
 import UIKit
 
 class MedicineTableViewController: UITableViewController {
+    
+    var medicines : [Medicine] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        medicines = createMedicines()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -18,28 +22,40 @@ class MedicineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    func createMedicines() -> [Medicine]{
+        let swift = Medicine()
+        swift.medicineName = "Medicine A"
+        
+        return [swift]
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return medicines.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+        let medicine = medicines [indexPath.row]
+        
+        // do i need an if or let statement or can this be by itself
+            cell.textLabel?.text = medicine.medicineName
+        
         return cell
     }
-    */
+    
+    
 
     /*
     // Override to support conditional editing of the table view.
