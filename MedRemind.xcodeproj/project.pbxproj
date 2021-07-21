@@ -18,6 +18,7 @@
 		9A82635626A744040019A72E /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82635526A744040019A72E /* AddMedicineViewController.swift */; };
 		9A82635826A74D990019A72E /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82635726A74D990019A72E /* MedicineTableViewController.swift */; };
 		9A82635A26A74DC30019A72E /* Medicine List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82635926A74DC30019A72E /* Medicine List.swift */; };
+		9A82635C26A7B2080019A72E /* CompleteMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82635B26A7B2080019A72E /* CompleteMedicineViewController.swift */; };
 		A8B879D626A7455E00AB8ED0 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B879D526A7455E00AB8ED0 /* AddReminderViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		9A82635526A744040019A72E /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
 		9A82635726A74D990019A72E /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
 		9A82635926A74DC30019A72E /* Medicine List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medicine List.swift"; sourceTree = "<group>"; };
+		9A82635B26A7B2080019A72E /* CompleteMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteMedicineViewController.swift; sourceTree = "<group>"; };
 		A8B879D526A7455E00AB8ED0 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 				9A82632B26A73ED10019A72E /* MedRemind.xcdatamodeld */,
 				9A82635726A74D990019A72E /* MedicineTableViewController.swift */,
 				9A82635926A74DC30019A72E /* Medicine List.swift */,
+				9A82635B26A7B2080019A72E /* CompleteMedicineViewController.swift */,
 			);
 			path = MedRemind;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				9A82635826A74D990019A72E /* MedicineTableViewController.swift in Sources */,
 				9A82635626A744040019A72E /* AddMedicineViewController.swift in Sources */,
 				9A82632526A73ED10019A72E /* SceneDelegate.swift in Sources */,
+				9A82635C26A7B2080019A72E /* CompleteMedicineViewController.swift in Sources */,
 				A8B879D626A7455E00AB8ED0 /* AddReminderViewController.swift in Sources */,
 				9A82632D26A73ED10019A72E /* MedRemind.xcdatamodeld in Sources */,
 			);

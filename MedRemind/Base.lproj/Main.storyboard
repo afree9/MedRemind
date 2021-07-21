@@ -52,7 +52,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vo-bh-bnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810" y="630"/>
+            <point key="canvasLocation" x="-77" y="629"/>
+        </scene>
+        <!--Complete Medicine View Controller-->
+        <scene sceneID="MxI-br-afG">
+            <objects>
+                <viewController id="7oP-ef-cnP" customClass="CompleteMedicineViewController" customModule="MedRemind" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PxB-Qy-1kd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Medicine Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-LD-c4d">
+                                <rect key="frame" x="70" y="138" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you take your Medicine Today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-55-umR">
+                                <rect key="frame" x="70" y="229" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89v-3N-4as">
+                                <rect key="frame" x="152" y="734" width="111" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete Medicine"/>
+                                <connections>
+                                    <action selector="deleteTapped:" destination="7oP-ef-cnP" eventType="touchUpInside" id="xyD-97-WxE"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-6v-BWK">
+                                <rect key="frame" x="80" y="300" width="326" height="31"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ra4-OE-0Ss"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7hT-55-umR" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="0xb-g3-1yF"/>
+                            <constraint firstItem="R6q-LD-c4d" firstAttribute="top" secondItem="ra4-OE-0Ss" secondAttribute="top" constant="50" id="6oY-iE-ba5"/>
+                            <constraint firstItem="x8R-6v-BWK" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="80" id="TNx-aO-mBK"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="x8R-6v-BWK" secondAttribute="trailing" constant="10" id="dpO-Ya-f7u"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="R6q-LD-c4d" secondAttribute="trailing" constant="70" id="oH8-na-YnQ"/>
+                            <constraint firstItem="7hT-55-umR" firstAttribute="top" secondItem="R6q-LD-c4d" secondAttribute="bottom" constant="70" id="oS1-iu-Ozh"/>
+                            <constraint firstItem="R6q-LD-c4d" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="qDQ-0p-2aH"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="7hT-55-umR" secondAttribute="trailing" constant="70" id="w86-q6-QMv"/>
+                            <constraint firstItem="x8R-6v-BWK" firstAttribute="top" secondItem="7hT-55-umR" secondAttribute="bottom" constant="50" id="yQW-xm-nuL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="20M-Aw-Dn7"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="R6q-LD-c4d" id="oJA-ww-lin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9f-FV-eJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1527.536231884058" y="629.46428571428567"/>
         </scene>
         <!--MedRemind-->
         <scene sceneID="y2d-jf-AWa">
@@ -105,6 +160,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7oP-ef-cnP" kind="show" identifier="moveToDelete" id="0N5-7h-QCZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sN-HR-9Jp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAk-kD-yH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1621.7391304347827" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="1852" y="-244"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bA2-Dk-W0f">
@@ -178,7 +236,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iMp-Ry-6e1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100.00000000000001" y="-34.151785714285715"/>
+            <point key="canvasLocation" x="-378" y="-315"/>
         </scene>
     </scenes>
     <resources>

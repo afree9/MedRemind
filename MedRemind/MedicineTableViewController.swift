@@ -102,8 +102,19 @@ class MedicineTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddMedicineViewController {
             addVC.previousVC = self
         }
+        
+        if let completeVC = segue.destination as? CompleteMedicineViewController {
+            if let medicine = sender as? Medicine {
+                completeVC.selectedMedicine = medicine
+                completeVC.previousVC = self
+            }
+        }
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-
+    override func tableView(_ tableView : UITableView, didSelectRowAt indexPath : IndexPath) {
+        let medicine = medicines[indexPath.row]
+        
+        performSegue(withIdentifier : "moveToDelete", sender: medicine)
+    }
 }
