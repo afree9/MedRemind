@@ -61,15 +61,15 @@ override func viewWillAppear(_ animated : Bool){
         // Configure the cell...
         let medicine = medicines[indexPath.row]
         
-        if let medicineName = medicine.medicineName{
-//            if medicine.medicineComplete {
-//                cell.textLabel?.text = "✅" + medicine.medicineName
-            }
+//        if let medicineName = medicine.medicineName{
+////            if medicine.medicineComplete {
+////                cell.textLabel?.text = "✅" + medicine.medicineName
+    
         
-        else {
-            cell.textLabel?.text = medicine.medicineName
-        }
-    }
+//        else {
+//            cell.textLabel?.text = medicine.medicineName
+//        }
+//    }
         
         return cell
     }

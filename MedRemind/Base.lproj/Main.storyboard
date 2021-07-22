@@ -140,15 +140,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQq-ZW-957" id="eaV-wa-OVa">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffE-K9-Dku">
-                                            <rect key="frame" x="342" y="11" width="20" height="20"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <connections>
-                                                <segue destination="NXA-pY-0cG" kind="show" id="JMq-nO-FTS"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -159,6 +150,18 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="MedRemind" id="18H-CC-uTn">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="FSp-mz-BBS">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ffE-K9-Dku">
+                                <rect key="frame" x="20" y="10" width="110" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Medicine">
+                                    <color key="titleColor" red="0.72120718630000002" green="0.8866176294" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NXA-pY-0cG" kind="show" id="JMq-nO-FTS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Pjc-vO-DwP">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="28I-Rk-9FI">
                                 <rect key="frame" x="297" y="7" width="97" height="30"/>
