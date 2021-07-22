@@ -184,11 +184,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ws2-ko-Fh2">
-                                            <rect key="frame" x="7" y="9" width="25" height="25"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-H0-5Ol">
+                                            <rect key="frame" x="20" y="7" width="49" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" backgroundImage="checkBoxOUTLINE "/>
-                                        </button>
+                                        </switch>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74166632939007227" green="0.91601306199999999" blue="0.7560869613273824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
@@ -361,7 +360,6 @@
         <segue reference="nHO-8t-rDr"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="checkBoxOUTLINE " width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
