@@ -150,23 +150,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
-                                            <rect key="frame" x="305" y="7" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
+                                            <rect key="frame" x="312" y="5" width="97" height="30"/>
                                             <state key="normal" title="Add Reminder"/>
                                             <connections>
                                                 <segue destination="BSc-G4-lSP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3jd-o2-QcC"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t99-Fj-pBL">
-                                            <rect key="frame" x="22" y="11" width="20" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t99-Fj-pBL">
+                                            <rect key="frame" x="287" y="7" width="20" height="22"/>
                                             <state key="normal" image="circle" catalog="system">
                                                 <color key="titleShadowColor" red="0.72120718630000002" green="0.8866176294" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74166632939007227" green="0.91601306199999999" blue="0.7560869613273824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="5" id="4OL-9f-43g"/>
+                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="leading" secondItem="t99-Fj-pBL" secondAttribute="trailing" constant="5" id="97O-zj-hCz"/>
+                                        <constraint firstItem="t99-Fj-pBL" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="7" id="jae-Ca-iGa"/>
+                                        <constraint firstItem="t99-Fj-pBL" firstAttribute="leading" secondItem="eaV-wa-OVa" secondAttribute="leading" constant="50" id="pYA-wv-sL2"/>
+                                        <constraint firstAttribute="trailing" secondItem="LBl-6k-rYG" secondAttribute="trailing" constant="5" id="qMQ-7a-QGL"/>
+                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="leading" secondItem="t99-Fj-pBL" secondAttribute="trailing" constant="5" id="toa-cL-CA2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
