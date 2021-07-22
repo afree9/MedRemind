@@ -135,7 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M0a-tw-tGP">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M0a-tw-tGP">
                             <rect key="frame" x="0.0" y="92.500000346790671" width="414" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -167,7 +167,13 @@
                             <outlet property="delegate" destination="FXF-oR-7bl" id="bC2-7N-Z2e"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Add Medicine" id="w7o-UX-wKk">
+                            <connections>
+                                <segue destination="NXA-pY-0cG" kind="show" id="V2v-EB-Lli"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" title="MedRemind" id="18H-CC-uTn">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="FSp-mz-BBS">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ffE-K9-Dku">
@@ -313,7 +319,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="oiO-Ta-MXp"/>
+        <segue reference="3jd-o2-QcC"/>
+        <segue reference="JMq-nO-FTS"/>
         <segue reference="1D7-I2-IZw"/>
     </inferredMetricsTieBreakers>
     <resources>
