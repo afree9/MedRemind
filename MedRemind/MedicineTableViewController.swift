@@ -11,8 +11,6 @@ import CoreData
 class MedicineTableViewController: UITableViewController {
     var medicines : [MedicineCD] = []
     
-    @IBOutlet weak var checkBox: UILabel!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +18,6 @@ class MedicineTableViewController: UITableViewController {
     }
         // no longer need - medicines = createMedicines()
 
-    @IBAction func checkTapped(_ sender: UIButton) {
-        
-    }
-    
     func getMedicines() {
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 if let coreDataMedicines = try?
@@ -134,3 +128,4 @@ override func viewWillAppear(_ animated : Bool){
     }
 
 }
+

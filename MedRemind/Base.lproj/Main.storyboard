@@ -150,21 +150,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
                                             <rect key="frame" x="312" y="5" width="97" height="30"/>
                                             <state key="normal" title="Add Reminder"/>
                                             <connections>
                                                 <segue destination="BSc-G4-lSP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3jd-o2-QcC"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t99-Fj-pBL">
-                                            <rect key="frame" x="287" y="7" width="20" height="22"/>
-                                            <state key="normal" image="circle" catalog="system">
-                                                <color key="titleShadowColor" red="0.72120718630000002" green="0.8866176294" blue="0.98328930140000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="check:" destination="FXF-oR-7bl" eventType="touchUpInside" id="zdy-LS-puf"/>
-                                                <action selector="checkTapped:" destination="FXF-oR-7bl" eventType="touchUpInside" id="1yg-Sm-Sec"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSP-NQ-TkC">
@@ -174,22 +164,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="check" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H99-9m-m5w">
-                                            <rect key="frame" x="244" y="14" width="46" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74166632939007227" green="0.91601306199999999" blue="0.7560869613273824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstItem="LBl-6k-rYG" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="5" id="4OL-9f-43g"/>
-                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="leading" secondItem="t99-Fj-pBL" secondAttribute="trailing" constant="5" id="97O-zj-hCz"/>
-                                        <constraint firstItem="t99-Fj-pBL" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="7" id="jae-Ca-iGa"/>
-                                        <constraint firstItem="t99-Fj-pBL" firstAttribute="leading" secondItem="eaV-wa-OVa" secondAttribute="leading" constant="50" id="pYA-wv-sL2"/>
                                         <constraint firstAttribute="trailing" secondItem="LBl-6k-rYG" secondAttribute="trailing" constant="5" id="qMQ-7a-QGL"/>
-                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="leading" secondItem="t99-Fj-pBL" secondAttribute="trailing" constant="5" id="toa-cL-CA2"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -222,7 +201,6 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="checkBox" destination="H99-9m-m5w" id="Lbj-Wd-AnK"/>
                         <segue destination="7oP-ef-cnP" kind="show" identifier="moveToDelete" id="0N5-7h-QCZ"/>
                     </connections>
                 </tableViewController>
@@ -357,7 +335,6 @@
         <segue reference="1D7-I2-IZw"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
