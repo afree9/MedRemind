@@ -16,46 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TlT-mB-y53">
-                                <rect key="frame" x="101" y="409" width="235" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e78-sx-R9G">
-                                <rect key="frame" x="148" y="577" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hG-cY-b8j">
+                                <rect key="frame" x="20" y="54" width="47" height="30"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="BSc-G4-lSP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oiO-Ta-MXp"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TAr-W0-fS7">
+                                <rect key="frame" x="70" y="163" width="320" height="162"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e78-sx-R9G">
+                                <rect key="frame" x="70" y="385" width="274" height="30"/>
                                 <state key="normal" title="Save :o"/>
                                 <connections>
                                     <action selector="didTapSaveButton" destination="KgZ-rf-UY4" eventType="touchUpInside" id="0B9-tr-qrD"/>
                                     <segue destination="FXF-oR-7bl" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="gRX-sw-WdS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hG-cY-b8j">
-                                <rect key="frame" x="20" y="44" width="47" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt; Back"/>
-                                <connections>
-                                    <segue destination="BSc-G4-lSP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="oiO-Ta-MXp"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Note:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4D-eU-ixX">
-                                <rect key="frame" x="25" y="416" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TAr-W0-fS7">
-                                <rect key="frame" x="0.0" y="163" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="odN-DO-Fdl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e78-sx-R9G" firstAttribute="leading" secondItem="odN-DO-Fdl" secondAttribute="leading" constant="70" id="KeT-cc-f2V"/>
+                            <constraint firstItem="odN-DO-Fdl" firstAttribute="trailing" secondItem="e78-sx-R9G" secondAttribute="trailing" constant="70" id="OwE-uN-Spj"/>
+                            <constraint firstItem="TAr-W0-fS7" firstAttribute="leading" secondItem="odN-DO-Fdl" secondAttribute="leading" constant="70" id="VLj-mi-HcX"/>
+                            <constraint firstItem="e78-sx-R9G" firstAttribute="top" secondItem="TAr-W0-fS7" secondAttribute="bottom" constant="75" id="hpI-ds-ATA"/>
+                            <constraint firstItem="7hG-cY-b8j" firstAttribute="top" secondItem="odN-DO-Fdl" secondAttribute="top" constant="10" id="u7g-va-mR0"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="bodyField" destination="TlT-mB-y53" id="tlL-Ug-Qid"/>
                         <outlet property="datePicker" destination="TAr-W0-fS7" id="Fqw-IG-QLn"/>
                     </connections>
                 </viewController>
@@ -156,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M0a-tw-tGP">
-                            <rect key="frame" x="0.0" y="92.500000346790671" width="414" height="21"/>
+                            <rect key="frame" x="0.0" y="90.500000346790671" width="414" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -164,14 +154,14 @@
                         </label>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="lQq-ZW-957">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="41.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lQq-ZW-957" id="eaV-wa-OVa" customClass="TableViewCell" customModule="MedRemind" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
-                                            <rect key="frame" x="312" y="5" width="97" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LBl-6k-rYG">
+                                            <rect key="frame" x="294" y="5" width="115" height="31.5"/>
                                             <state key="normal" title="Add Reminder"/>
                                             <connections>
                                                 <segue destination="BSc-G4-lSP" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="3jd-o2-QcC"/>
@@ -184,15 +174,20 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-H0-5Ol">
-                                            <rect key="frame" x="20" y="7" width="49" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cRW-H0-5Ol">
+                                            <rect key="frame" x="240" y="5" width="51" height="31.5"/>
                                         </switch>
                                     </subviews>
                                     <color key="backgroundColor" red="0.74166632939007227" green="0.91601306199999999" blue="0.7560869613273824" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="5" id="4OL-9f-43g"/>
-                                        <constraint firstAttribute="trailing" secondItem="LBl-6k-rYG" secondAttribute="trailing" constant="5" id="qMQ-7a-QGL"/>
+                                        <constraint firstAttribute="trailing" secondItem="LBl-6k-rYG" secondAttribute="trailing" constant="5" id="9aS-en-Ixg"/>
+                                        <constraint firstAttribute="bottom" secondItem="LBl-6k-rYG" secondAttribute="bottom" constant="5" id="DLw-fS-dOq"/>
+                                        <constraint firstAttribute="bottom" secondItem="LBl-6k-rYG" secondAttribute="bottom" constant="5" id="OHp-67-b4B"/>
+                                        <constraint firstAttribute="bottom" secondItem="cRW-H0-5Ol" secondAttribute="bottom" constant="5" id="SsV-kw-pIG"/>
+                                        <constraint firstItem="cRW-H0-5Ol" firstAttribute="leading" secondItem="eaV-wa-OVa" secondAttribute="leading" constant="240" id="Ub0-7k-c51"/>
+                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="5" id="VeR-An-G4i"/>
+                                        <constraint firstItem="cRW-H0-5Ol" firstAttribute="top" secondItem="eaV-wa-OVa" secondAttribute="top" constant="5" id="ZeU-Em-9L5"/>
+                                        <constraint firstItem="LBl-6k-rYG" firstAttribute="leading" secondItem="cRW-H0-5Ol" secondAttribute="trailing" constant="5" id="qyl-XE-QKe"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -354,10 +349,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0N5-7h-QCZ"/>
-        <segue reference="3jd-o2-QcC"/>
+        <segue reference="oiO-Ta-MXp"/>
         <segue reference="JMq-nO-FTS"/>
-        <segue reference="nHO-8t-rDr"/>
+        <segue reference="gRX-sw-WdS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
