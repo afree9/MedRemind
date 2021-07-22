@@ -9,7 +9,7 @@ import UIKit
 
 class AddReminderViewController: UIViewController {
     
-    @IBOutlet weak var bodyField: UITextField!
+
     @IBOutlet weak var datePicker: UIDatePicker!
     
     public var completion : ((String, String, Date) -> Void)?
@@ -21,10 +21,7 @@ class AddReminderViewController: UIViewController {
     }
     
     @IBAction func didTapSaveButton() {
-        if let bodyText = bodyField.text, !bodyText.isEmpty{
         let targetDate = datePicker.date
-            
-        }
     }
     
 
