@@ -11,15 +11,20 @@ import CoreData
 class MedicineTableViewController: UITableViewController {
     var medicines : [MedicineCD] = []
     
+    @IBOutlet weak var checkBox: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
         // no longer need - medicines = createMedicines()
+
+    @IBAction func checkTapped(_ sender: UIButton) {
         
-        
-        func getMedicines() {
+    }
+    
+    func getMedicines() {
             if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 if let coreDataMedicines = try?
                     context.fetch(MedicineCD.fetchRequest()) as? [MedicineCD] {
