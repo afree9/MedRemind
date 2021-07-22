@@ -13,6 +13,7 @@ var previousVC = MedicineTableViewController()
     var selectedMedicine : MedicineCD?
     
     @IBOutlet weak var noteTextField: UITextField!
+    
     @IBOutlet weak var noteText: UILabel!
     
     @IBAction func saveNote(_ sender: Any) {
