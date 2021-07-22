@@ -77,12 +77,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you take your Medicine Today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-55-umR">
-                                <rect key="frame" x="70" y="185" width="274" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89v-3N-4as">
                                 <rect key="frame" x="152" y="734" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,35 +85,61 @@
                                     <action selector="deleteTapped:" destination="7oP-ef-cnP" eventType="touchUpInside" id="xyD-97-WxE"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x8R-6v-BWK">
-                                <rect key="frame" x="80" y="256" width="326" height="31"/>
-                            </switch>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAS-2X-D1S">
-                                <rect key="frame" x="190" y="300" width="105" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfI-wK-q4D">
+                                <rect key="frame" x="70" y="215" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJW-e4-eOU">
+                                <rect key="frame" x="175" y="346" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Yay! Click here:"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwp-ZX-eYF">
+                                <rect key="frame" x="70" y="295" width="274" height="30"/>
+                                <state key="normal" title="Save Note"/>
                                 <connections>
-                                    <action selector="completeButton:" destination="7oP-ef-cnP" eventType="touchUpInside" id="eZ8-Pl-0fI"/>
+                                    <action selector="saveNote:" destination="7oP-ef-cnP" eventType="touchUpInside" id="sOM-Fc-Gu5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8d-rx-uKl">
+                                <rect key="frame" x="70" y="251" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YMe-ep-Ccy">
+                                <rect key="frame" x="34" y="44" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="FXF-oR-7bl" kind="show" id="nHO-8t-rDr"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ra4-OE-0Ss"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7hT-55-umR" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="0xb-g3-1yF"/>
+                            <constraint firstItem="I8d-rx-uKl" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="3el-uK-yZR"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="Qwp-ZX-eYF" secondAttribute="trailing" constant="70" id="618-Wj-aGv"/>
                             <constraint firstItem="R6q-LD-c4d" firstAttribute="top" secondItem="ra4-OE-0Ss" secondAttribute="top" constant="50" id="6oY-iE-ba5"/>
-                            <constraint firstItem="x8R-6v-BWK" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="80" id="TNx-aO-mBK"/>
-                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="x8R-6v-BWK" secondAttribute="trailing" constant="10" id="dpO-Ya-f7u"/>
+                            <constraint firstItem="Qwp-ZX-eYF" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="JhA-2H-nIh"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="I8d-rx-uKl" secondAttribute="trailing" constant="70" id="Nc5-sh-0xf"/>
+                            <constraint firstItem="Qwp-ZX-eYF" firstAttribute="top" secondItem="I8d-rx-uKl" secondAttribute="bottom" constant="10" id="WHc-cT-bkJ"/>
+                            <constraint firstItem="I8d-rx-uKl" firstAttribute="top" secondItem="tfI-wK-q4D" secondAttribute="bottom" constant="15" id="WK7-2f-7m5"/>
+                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="tfI-wK-q4D" secondAttribute="trailing" constant="70" id="bYK-xc-EQf"/>
                             <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="R6q-LD-c4d" secondAttribute="trailing" constant="70" id="oH8-na-YnQ"/>
-                            <constraint firstItem="7hT-55-umR" firstAttribute="top" secondItem="R6q-LD-c4d" secondAttribute="bottom" constant="70" id="oS1-iu-Ozh"/>
                             <constraint firstItem="R6q-LD-c4d" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="qDQ-0p-2aH"/>
-                            <constraint firstItem="ra4-OE-0Ss" firstAttribute="trailing" secondItem="7hT-55-umR" secondAttribute="trailing" constant="70" id="w86-q6-QMv"/>
-                            <constraint firstItem="x8R-6v-BWK" firstAttribute="top" secondItem="7hT-55-umR" secondAttribute="bottom" constant="50" id="yQW-xm-nuL"/>
+                            <constraint firstItem="tfI-wK-q4D" firstAttribute="top" secondItem="R6q-LD-c4d" secondAttribute="bottom" constant="100" id="sOp-FC-dZO"/>
+                            <constraint firstItem="tfI-wK-q4D" firstAttribute="leading" secondItem="ra4-OE-0Ss" secondAttribute="leading" constant="70" id="uWg-dv-aAZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="20M-Aw-Dn7"/>
                     <connections>
-                        <outlet property="completeSwitch" destination="x8R-6v-BWK" id="wYc-FV-WTP"/>
+                        <outlet property="noteText" destination="RJW-e4-eOU" id="sdf-kM-alZ"/>
+                        <outlet property="noteTextField" destination="I8d-rx-uKl" id="hyG-St-wQD"/>
                         <outlet property="titleLabel" destination="R6q-LD-c4d" id="oJA-ww-lin"/>
                     </connections>
                 </viewController>
@@ -335,9 +355,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="0N5-7h-QCZ"/>
         <segue reference="3jd-o2-QcC"/>
         <segue reference="JMq-nO-FTS"/>
-        <segue reference="1D7-I2-IZw"/>
+        <segue reference="nHO-8t-rDr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkBoxOUTLINE " width="22" height="22"/>

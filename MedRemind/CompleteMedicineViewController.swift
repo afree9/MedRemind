@@ -12,6 +12,15 @@ class CompleteMedicineViewController: UIViewController {
 var previousVC = MedicineTableViewController()
     var selectedMedicine : MedicineCD?
     
+    @IBOutlet weak var noteTextField: UITextField!
+    @IBOutlet weak var noteText: UILabel!
+    
+    @IBAction func saveNote(_ sender: Any) {
+        if let note = noteTextField.text{
+                noteText.text = note
+    }
+    }
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var completeSwitch: UISwitch!
